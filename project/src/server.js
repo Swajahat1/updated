@@ -42,7 +42,7 @@ const TOKEN_PATH = path.join(__dirname, 'config', 'token.json');
 const oAuth2Client = new google.auth.OAuth2(
   CREDENTIALS.web.client_id,
   CREDENTIALS.web.client_secret,
-  'http://192.168.2.105:3000/api/google-meet/oauth2callback'
+  'https://mindease-backend-production.up.railway.app/api/google-meet/oauth2callback'
 );
 
 let tokens = null;
@@ -87,9 +87,9 @@ app.get('/api/location/ip-geo', async (req, res) => {
     }
 
     if ((ip === '::1' || ip === '127.0.0.1') && !req.query.ip) {
-      // Return a default location for  192.168.2.105 testing
+      // Return a default location for  192.168.2.102 testing
       return res.json({
-        ip: ' 192.168.2.105',
+        ip: ' 192.168.2.102',
         country: 'United States',
         region: 'California',
         city: 'San Francisco',

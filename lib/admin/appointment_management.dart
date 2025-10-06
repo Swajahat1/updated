@@ -42,7 +42,8 @@ class _AppointmentManagementScreenState
 
     try {
       final response = await http.get(
-        Uri.parse('http://192.168.2.105:3000/api/appointments'),
+        Uri.parse(
+            'https://mindease-backend-production.up.railway.app/api/appointments'),
         headers: {'Content-Type': 'application/json'},
       );
 
@@ -95,7 +96,8 @@ class _AppointmentManagementScreenState
       String appointmentId, String newStatus) async {
     try {
       final response = await http.put(
-        Uri.parse('http://192.168.2.105:3000/api/appointments/$appointmentId'),
+        Uri.parse(
+            'https://mindease-backend-production.up.railway.app/api/appointments/$appointmentId'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({'status': newStatus}),
       );

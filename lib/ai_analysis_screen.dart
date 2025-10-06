@@ -66,7 +66,8 @@ class _AIAnalysisScreenState extends State<AIAnalysisScreen>
     }
 
     try {
-      final url = 'http://192.168.2.105:3000/api/ai-analysis/realtime/$userId';
+      final url =
+          'https://mindease-backend-production.up.railway.app/api/ai-analysis/realtime/$userId';
       debugPrint('📡 Making request to: $url');
 
       final response = await http.post(
@@ -116,7 +117,8 @@ class _AIAnalysisScreenState extends State<AIAnalysisScreen>
 
     try {
       final response = await http.post(
-        Uri.parse('http://192.168.2.105:3000/api/ai-analysis/analyze/$userId'),
+        Uri.parse(
+            'https://mindease-backend-production.up.railway.app/api/ai-analysis/analyze/$userId'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({'content': _textController.text.trim()}),
       );
@@ -162,7 +164,7 @@ class _AIAnalysisScreenState extends State<AIAnalysisScreen>
     try {
       final response = await http.get(
         Uri.parse(
-            'http:// 192.168.2.105:3000/api/ai-analysis/history/$userId?limit=20'),
+            'http:// 192.168.2.102:3000/api/ai-analysis/history/$userId?limit=20'),
       );
 
       if (response.statusCode == 200) {

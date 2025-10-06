@@ -72,7 +72,7 @@ class SupportScreen extends StatelessWidget {
                           _buildContactOption(
                             Icons.email,
                             'Email Support',
-                            'support@mindease.com',
+                            'bscs2112134@szabistpk',
                             'Get help via email',
                             () => _launchEmail('support@mindease.com'),
                           ),

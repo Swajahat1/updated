@@ -18,7 +18,8 @@ Future<void> testLogin() async {
     // Test user login
     print("\n1️⃣ Testing user login...");
     final userResponse = await http.post(
-      Uri.parse("http://192.168.2.105:3000/api/users/login"),
+      Uri.parse(
+          "https://mindease-backend-production.up.railway.app/api/users/login"),
       headers: {"Content-Type": "application/json"},
       body: jsonEncode({
         "email": testEmail,
@@ -40,7 +41,8 @@ Future<void> testLogin() async {
     // Test therapist login
     print("\n2️⃣ Testing therapist login...");
     final therapistResponse = await http.post(
-      Uri.parse("http://192.168.2.105:3000/api/therapists/login"),
+      Uri.parse(
+          "https://mindease-backend-production.up.railway.app/api/therapists/login"),
       headers: {"Content-Type": "application/json"},
       body: jsonEncode({
         "email": testEmail,
@@ -67,7 +69,7 @@ Future<void> testLogin() async {
 
   print("\n🔧 Debugging suggestions:");
   print(
-      "1. Make sure the backend server is running on http://192.168.2.105:3000");
+      "1. Make sure the backend server is running on https://mindease-backend-production.up.railway.app");
   print("2. Check if you have valid user credentials in the database");
   print("3. Verify network connectivity between the app and server");
   print("4. Check server logs for any errors");

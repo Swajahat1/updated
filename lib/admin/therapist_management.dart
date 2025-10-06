@@ -32,7 +32,7 @@ class _TherapistManagementScreenState extends State<TherapistManagementScreen> {
     try {
       print('🔄 Fetching therapists from API...');
       final response = await http.get(
-        Uri.parse('http:// 192.168.2.105:3000/api/therapists'),
+        Uri.parse('http:// 192.168.2.102:3000/api/therapists'),
         headers: {'Content-Type': 'application/json'},
       );
 
@@ -67,7 +67,7 @@ class _TherapistManagementScreenState extends State<TherapistManagementScreen> {
 
       final response = await http.put(
         Uri.parse(
-            'http:// 192.168.2.105:3000/api/therapists/$therapistId/approve'),
+            'http:// 192.168.2.102:3000/api/therapists/$therapistId/approve'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({
           'adminId': 'admin-user-id', // You can get this from user session
@@ -123,7 +123,7 @@ class _TherapistManagementScreenState extends State<TherapistManagementScreen> {
     try {
       final response = await http.put(
         Uri.parse(
-            'http:// 192.168.2.105:3000/api/therapists/$therapistId/block'),
+            'http:// 192.168.2.102:3000/api/therapists/$therapistId/block'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({'isBlocked': !isBlocked}),
       );

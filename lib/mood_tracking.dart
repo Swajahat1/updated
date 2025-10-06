@@ -285,7 +285,7 @@ class _LoginScreenState extends State<LoginScreen> {
     try {
       final response = await http.post(
         Uri.parse(
-            'http:// 192.168.2.105:3000/api/users/login'), // Replace with your backend IP
+            'http:// 192.168.2.102:3000/api/users/login'), // Replace with your backend IP
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({
           'email': emailController.text,
@@ -394,7 +394,7 @@ class _MoodTrackingScreenState extends State<MoodTrackingScreen> {
 
     try {
       final response = await http.get(
-        Uri.parse('http:// 192.168.2.105:3000/api/users/$userId/mood'),
+        Uri.parse('http:// 192.168.2.102:3000/api/users/$userId/mood'),
         headers: {'Content-Type': 'application/json'},
       );
 
@@ -447,7 +447,7 @@ class _MoodTrackingScreenState extends State<MoodTrackingScreen> {
       });
       print('Sending mood entry: $body');
       final response = await http.post(
-        Uri.parse('http:// 192.168.2.105:3000/api/users/$userId/mood'),
+        Uri.parse('http:// 192.168.2.102:3000/api/users/$userId/mood'),
         headers: {'Content-Type': 'application/json'},
         body: body,
       );
@@ -488,7 +488,8 @@ class _MoodTrackingScreenState extends State<MoodTrackingScreen> {
 
     try {
       final response = await http.delete(
-        Uri.parse('http://192.168.2.105:3000/api/mood/$moodId'),
+        Uri.parse(
+            'https://mindease-backend-production.up.railway.app/api/mood/$moodId'),
         headers: {'Content-Type': 'application/json'},
       );
 

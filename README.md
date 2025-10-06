@@ -391,7 +391,7 @@ MindEase follows a **multi-application architecture** with clear separation of c
 - **Objective**: Verify admin can access admin portal
 - **Preconditions**: Admin portal is running on port 8084
 - **Test Steps**:
-  1. Navigate to http:// 192.168.2.105:8084
+  1. Navigate to http:// 192.168.2.102:8084
   2. Enter admin credentials
   3. Click "Login" button
 - **Expected Result**: Admin logged in, dashboard displayed
@@ -598,7 +598,7 @@ Before using MindEase, ensure your system meets the following requirements:
 ### Admin Guide (Admin Portal)
 
 #### 1. Accessing Admin Portal
-1. **Navigate to Admin Portal**: http:// 192.168.2.105:8084
+1. **Navigate to Admin Portal**: http:// 192.168.2.102:8084
 2. **Enter Admin Credentials**: Use provided admin login
 3. **Access Dashboard**: View system overview
 

@@ -3,7 +3,7 @@
 // import 'package:http/http.dart' as http;
 
 // class ApiService {
-//   static const String baseUrl = 'http:// 192.168.2.105:3000'; // Backend URL
+//   static const String baseUrl = 'http:// 192.168.2.102:3000'; // Backend URL
 
 //   // Signup Function
 //   static Future<Map<String, dynamic>> signup(String username, String email, String password, String userType, ) async {
@@ -55,7 +55,8 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class ApiService {
-  static const String baseUrl = 'http://192.168.2.105:3000';
+  static const String baseUrl =
+      'https://mindease-backend-production.up.railway.app';
 
   /// Sends signup details to the backend.
   /// [username]: User's name

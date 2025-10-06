@@ -34,7 +34,7 @@ class _PaymentMethodsScreenState extends State<PaymentMethodsScreen> {
     try {
       final response = await http.get(
         Uri.parse(
-            'http:// 192.168.2.105:3000/api/payments/user/${widget.userId}'),
+            'http:// 192.168.2.102:3000/api/payments/user/${widget.userId}'),
         headers: {'Content-Type': 'application/json'},
       );
 

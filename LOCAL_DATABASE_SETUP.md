@@ -7,7 +7,7 @@ Your Mindease project has been successfully configured to use a local MongoDB da
 ## 📋 Configuration Details
 
 - **Database Name**: `mindease_local`
-- **Connection String**: `mongodb:// 192.168.2.105:27017/mindease_local`
+- **Connection String**: `mongodb:// 192.168.2.102:27017/mindease_local`
 - **Data Directory**: `C:\data\db`
 - **MongoDB Version**: 8.0
 

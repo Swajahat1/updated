@@ -30,7 +30,7 @@ class _JournalScreenState extends State<JournalScreen> {
     try {
       final response = await http.get(
         Uri.parse(
-            'http://192.168.2.105:3000/api/journal/user/${widget.userId}'),
+            'https://mindease-backend-production.up.railway.app/api/journal/user/${widget.userId}'),
         headers: {'Content-Type': 'application/json'},
       );
 
@@ -69,7 +69,8 @@ class _JournalScreenState extends State<JournalScreen> {
       print('Sending payload: $payload'); // Log payload for debugging
 
       final response = await http.post(
-        Uri.parse('http://192.168.2.105:3000/api/journal/'),
+        Uri.parse(
+            'https://mindease-backend-production.up.railway.app/api/journal/'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode(payload),
       );
@@ -101,7 +102,8 @@ class _JournalScreenState extends State<JournalScreen> {
   Future<void> _deleteJournalEntry(String entryId) async {
     try {
       final response = await http.delete(
-        Uri.parse('http://192.168.2.105:3000/api/journal/$entryId'),
+        Uri.parse(
+            'https://mindease-backend-production.up.railway.app/api/journal/$entryId'),
         headers: {'Content-Type': 'application/json'},
       );
 

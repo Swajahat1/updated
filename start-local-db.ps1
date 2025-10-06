@@ -43,6 +43,6 @@ if ($LASTEXITCODE -eq 0) {
 
 Write-Host "`n🎉 Local MongoDB setup completed!" -ForegroundColor Green
 Write-Host "📋 Database: mindease_local" -ForegroundColor Cyan
-Write-Host "🌐 Connection: mongodb:// 192.168.2.105:27017/mindease_local" -ForegroundColor Cyan
+Write-Host "🌐 Connection: mongodb:// 192.168.2.102:27017/mindease_local" -ForegroundColor Cyan
 Write-Host "`nTo start your server, run: cd project && npm start" -ForegroundColor Yellow
 Write-Host "To stop MongoDB, find the mongod process and kill it" -ForegroundColor Yellow

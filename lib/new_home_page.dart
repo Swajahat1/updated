@@ -69,7 +69,8 @@ class _NewHomeScreenState extends State<NewHomeScreen> {
   Future<void> _fetchUserDetails() async {
     try {
       final response = await http.get(
-        Uri.parse('http://192.168.2.105:3000/api/users/${widget.userId}'),
+        Uri.parse(
+            'https://mindease-backend-production.up.railway.app/api/users/${widget.userId}'),
         headers: {'Content-Type': 'application/json'},
       );
 
@@ -93,7 +94,7 @@ class _NewHomeScreenState extends State<NewHomeScreen> {
 
       final response = await http.get(
         Uri.parse(
-            'http://192.168.2.105:3000/api/appointments/user/${widget.userId}'),
+            'https://mindease-backend-production.up.railway.app/api/appointments/user/${widget.userId}'),
         headers: headers,
       );
 
@@ -116,7 +117,8 @@ class _NewHomeScreenState extends State<NewHomeScreen> {
       final headers = await SessionService.getAuthHeaders();
 
       final response = await http.get(
-        Uri.parse('http://192.168.2.105:3000/api/mood/${widget.userId}'),
+        Uri.parse(
+            'https://mindease-backend-production.up.railway.app/api/mood/${widget.userId}'),
         headers: headers,
       );
 
@@ -145,7 +147,8 @@ class _NewHomeScreenState extends State<NewHomeScreen> {
       final headers = await SessionService.getAuthHeaders();
 
       final response = await http.post(
-        Uri.parse('http://192.168.2.105:3000/api/mood/'),
+        Uri.parse(
+            'https://mindease-backend-production.up.railway.app/api/mood/'),
         headers: headers,
         body: jsonEncode({
           'userId': widget.userId,

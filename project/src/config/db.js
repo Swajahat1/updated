@@ -28,7 +28,7 @@ const connectDB = async () => {
 
   } catch (error) {
     console.error('❌ Local MongoDB connection failed:', error.message);
-    console.log('💡 Please ensure MongoDB is running on  192.168.2.105:27017');
+    console.log('💡 Please ensure MongoDB is running on  192.168.2.102:27017');
     console.log('🔧 Troubleshooting:');
     console.log('   1. Start MongoDB service: net start MongoDB (as admin)');
     console.log('   2. Or run: mongod --dbpath "C:\\data\\db"');

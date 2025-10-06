@@ -75,7 +75,7 @@ class LocationService {
     try {
       final response = await http.get(
         Uri.parse(
-            'http:// 192.168.2.105:3000/api/therapists/nearby?lat=$lat&lng=$lng&radius=$radius'),
+            'http:// 192.168.2.102:3000/api/therapists/nearby?lat=$lat&lng=$lng&radius=$radius'),
       );
 
       if (response.statusCode == 200) {
@@ -92,7 +92,7 @@ class LocationService {
       String userId, double lat, double lng) async {
     try {
       final response = await http.post(
-        Uri.parse('http:// 192.168.2.105:3000/api/location/update'),
+        Uri.parse('http:// 192.168.2.102:3000/api/location/update'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({
           'userId': userId,
@@ -131,7 +131,7 @@ class LocationService {
   static Future<Map<String, dynamic>?> getIPBasedLocation() async {
     try {
       final response = await http.get(
-        Uri.parse('http:// 192.168.2.105:3000/api/location/ip-geo'),
+        Uri.parse('http:// 192.168.2.102:3000/api/location/ip-geo'),
       );
 
       if (response.statusCode == 200) {

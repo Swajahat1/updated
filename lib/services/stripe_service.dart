@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class StripeService {
-  static const String _baseUrl = 'http:// 192.168.2.105:3000/api/stripe';
+  static const String _baseUrl = 'http:// 192.168.2.102:3000/api/stripe';
 
   // Initialize Stripe with publishable key
   static Future<void> init() async {

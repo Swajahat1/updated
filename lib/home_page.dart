@@ -66,7 +66,8 @@ class HomeScreenState extends State<HomeScreen> {
   }
 
   Future<void> _fetchUserDetails() async {
-    final url = 'http://192.168.2.105:3000/api/users/${widget.userId}';
+    final url =
+        'https://mindease-backend-production.up.railway.app/api/users/${widget.userId}';
     try {
       final response = await http.get(
         Uri.parse(url),
@@ -106,7 +107,8 @@ class HomeScreenState extends State<HomeScreen> {
   }
 
   Future<void> _fetchTherapists() async {
-    const url = 'http://192.168.2.105:3000/api/therapists';
+    const url =
+        'https://mindease-backend-production.up.railway.app/api/therapists';
     try {
       final response = await http.get(Uri.parse(url));
       if (response.statusCode == 200) {
@@ -175,7 +177,8 @@ class HomeScreenState extends State<HomeScreen> {
 
       // Fetch therapists from API
       final response = await http.get(
-        Uri.parse('http://192.168.2.105:3000/api/therapists'),
+        Uri.parse(
+            'https://mindease-backend-production.up.railway.app/api/therapists'),
         headers: {'Content-Type': 'application/json'},
       );
 
@@ -239,7 +242,8 @@ class HomeScreenState extends State<HomeScreen> {
     try {
       // Fetch therapists from API
       final response = await http.get(
-        Uri.parse('http://192.168.2.105:3000/api/therapists'),
+        Uri.parse(
+            'https://mindease-backend-production.up.railway.app/api/therapists'),
         headers: {'Content-Type': 'application/json'},
       );
 
@@ -356,7 +360,7 @@ class HomeScreenState extends State<HomeScreen> {
                 'This might be because:',
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
-              Text('• You\'re testing on  192.168.2.105'),
+              Text('• You\'re testing on  192.168.2.102'),
               Text('• Network connectivity issues'),
               Text('• Location service is down'),
               SizedBox(height: 16),
@@ -1501,7 +1505,8 @@ class PhysicalAppointmentScreenState extends State<PhysicalAppointmentScreen> {
 
     try {
       final response = await http.post(
-        Uri.parse('http://192.168.2.105:3000/api/appointments'),
+        Uri.parse(
+            'https://mindease-backend-production.up.railway.app/api/appointments'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({
           'userId': widget.userId,
@@ -1760,7 +1765,8 @@ class OnlineAppointmentScreenState extends State<OnlineAppointmentScreen> {
 
     try {
       final response = await http.post(
-        Uri.parse('http://192.168.2.105:3000/api/appointments'),
+        Uri.parse(
+            'https://mindease-backend-production.up.railway.app/api/appointments'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({
           'userId': widget.userId,

@@ -42,7 +42,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
 
       final response = await http.put(
         Uri.parse(
-            'http://192.168.2.105:3000/api/users/${widget.userId}/password'),
+            'https://mindease-backend-production.up.railway.app/api/users/${widget.userId}/password'),
         headers: headers,
         body: jsonEncode({
           'currentPassword': _currentPasswordController.text,

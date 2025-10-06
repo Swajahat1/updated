@@ -30,7 +30,8 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
     try {
       // Replace with your actual API URL
       final response = await http.post(
-        Uri.parse('http://192.168.2.105:3000/api/users/forgot-password'),
+        Uri.parse(
+            'https://mindease-backend-production.up.railway.app/api/users/forgot-password'),
         headers: {
           'Content-Type': 'application/json',
         },

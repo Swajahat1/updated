@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const API_BASE = 'http:// 192.168.2.105:3000/api';
+const API_BASE = 'http:// 192.168.2.102:3000/api';
 
 const therapists = [
   {

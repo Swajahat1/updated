@@ -33,7 +33,7 @@ class _MedicationScreenState extends State<MedicationScreen>
     try {
       final response = await http.get(
         Uri.parse(
-            'http://192.168.2.105:3000/api/medications/user/${widget.userId}'),
+            'https://mindease-backend-production.up.railway.app/api/medications/user/${widget.userId}'),
         headers: {'Content-Type': 'application/json'},
       );
 
@@ -58,7 +58,7 @@ class _MedicationScreenState extends State<MedicationScreen>
     try {
       final response = await http.get(
         Uri.parse(
-            'http://192.168.2.105:3000/api/medications/user/${widget.userId}/today'),
+            'https://mindease-backend-production.up.railway.app/api/medications/user/${widget.userId}/today'),
         headers: {'Content-Type': 'application/json'},
       );
 
@@ -77,7 +77,7 @@ class _MedicationScreenState extends State<MedicationScreen>
     try {
       final response = await http.post(
         Uri.parse(
-            'http://192.168.2.105:3000/api/medications/$medicationId/log'),
+            'https://mindease-backend-production.up.railway.app/api/medications/$medicationId/log'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({
           'taken': taken,

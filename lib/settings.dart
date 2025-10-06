@@ -52,7 +52,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     try {
       final response = await http.get(
         Uri.parse(
-            'http://192.168.2.105:3000/api/users/${widget.userId}/profile'),
+            'https://mindease-backend-production.up.railway.app/api/users/${widget.userId}/profile'),
         headers: {'Content-Type': 'application/json'},
       );
 
@@ -99,7 +99,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
         // Upload to server
         final response = await http.post(
           Uri.parse(
-              'http://192.168.2.105:3000/api/users/${widget.userId}/profile-photo'),
+              'https://mindease-backend-production.up.railway.app/api/users/${widget.userId}/profile-photo'),
           headers: {'Content-Type': 'application/json'},
           body: jsonEncode({'profilePhoto': dataUrl}),
         );

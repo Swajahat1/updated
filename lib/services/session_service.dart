@@ -13,7 +13,8 @@ class SessionService {
   // Session expiry time (7 days in milliseconds)
   static const int _sessionExpiryDuration = 7 * 24 * 60 * 60 * 1000;
 
-  static const String _baseUrl = 'http://192.168.2.105:3000/api';
+  static const String _baseUrl =
+      'https://mindease-backend-production.up.railway.app/api';
 
   /// Save user session data after successful login
   static Future<void> saveSession({

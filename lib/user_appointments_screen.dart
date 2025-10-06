@@ -38,7 +38,7 @@ class _UserAppointmentsScreenState extends State<UserAppointmentsScreen> {
     try {
       final response = await http.get(
         Uri.parse(
-            'http://192.168.2.105:3000/api/appointments/user/${widget.userId}'),
+            'https://mindease-backend-production.up.railway.app/api/appointments/user/${widget.userId}'),
         headers: {'Content-Type': 'application/json'},
       );
 

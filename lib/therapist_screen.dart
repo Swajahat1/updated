@@ -75,7 +75,7 @@ class _CreateTherapistPageState extends State<CreateTherapistPage> {
     try {
       final response = await http.post(
         Uri.parse(
-            'http://192.168.2.105:3000/api/therapists'), // Fixed: http instead of https
+            'https://mindease-backend-production.up.railway.app/api/therapists'), // Fixed: http instead of https
         headers: <String, String>{
           'Content-Type': 'application/json; charset=UTF-8',
         },

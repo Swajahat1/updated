@@ -58,7 +58,8 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
 
     try {
       final response = await http.put(
-        Uri.parse('http://192.168.2.105:3000/api/users/${widget.userId}'),
+        Uri.parse(
+            'https://mindease-backend-production.up.railway.app/api/users/${widget.userId}'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({
           'username': _usernameController.text.trim(),

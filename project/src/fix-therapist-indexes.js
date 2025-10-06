@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 async function fixTherapistIndexes() {
   try {
     console.log('Connecting to MongoDB...');
-    await mongoose.connect('mongodb:// 192.168.2.105:27017/mindease');
+    await mongoose.connect('mongodb:// 192.168.2.102:27017/mindease');
     
     const db = mongoose.connection.db;
     const collection = db.collection('therapists');

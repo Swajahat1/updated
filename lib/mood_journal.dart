@@ -61,13 +61,15 @@ class _MoodJournalScreenState extends State<MoodJournalScreen>
     try {
       // Fetch mood entries
       final moodResponse = await http.get(
-        Uri.parse('http://192.168.2.105:3000/api/mood/$userId'),
+        Uri.parse(
+            'https://mindease-backend-production.up.railway.app/api/mood/$userId'),
         headers: {'Content-Type': 'application/json'},
       );
 
       // Fetch journal entries
       final journalResponse = await http.get(
-        Uri.parse('http://192.168.2.105:3000/api/journal/'),
+        Uri.parse(
+            'https://mindease-backend-production.up.railway.app/api/journal/'),
         headers: {'Content-Type': 'application/json'},
       );
 
@@ -151,7 +153,8 @@ class _MoodJournalScreenState extends State<MoodJournalScreen>
     try {
       // Save journal entry
       final journalResponse = await http.post(
-        Uri.parse('http://192.168.2.105:3000/api/journal/create'),
+        Uri.parse(
+            'https://mindease-backend-production.up.railway.app/api/journal/create'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({
           'userId': userId,

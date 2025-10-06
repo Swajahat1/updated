@@ -116,7 +116,7 @@ class _AnxietyDepressionTestScreenState
       });
 
       final response = await http.post(
-        Uri.parse('http:// 192.168.2.105:3000/api/test-results'),
+        Uri.parse('http:// 192.168.2.102:3000/api/test-results'),
         headers: {
           'Content-Type': 'application/json',
         },

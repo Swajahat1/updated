@@ -75,7 +75,8 @@ class _LocationTherapistFinderState extends State<LocationTherapistFinder> {
     try {
       // Fetch all therapists
       final response = await http.get(
-        Uri.parse('http://192.168.2.105:3000/api/therapists'),
+        Uri.parse(
+            'https://mindease-backend-production.up.railway.app/api/therapists'),
         headers: {'Content-Type': 'application/json'},
       );
 
@@ -125,7 +126,8 @@ class _LocationTherapistFinderState extends State<LocationTherapistFinder> {
   Future<void> _loadAllTherapists() async {
     try {
       final response = await http.get(
-        Uri.parse('http://192.168.2.105:3000/api/therapists'),
+        Uri.parse(
+            'https://mindease-backend-production.up.railway.app/api/therapists'),
         headers: {'Content-Type': 'application/json'},
       );
 

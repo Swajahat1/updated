@@ -48,7 +48,7 @@ class _PaymentManagementScreenState extends State<PaymentManagementScreen> {
 
     try {
       final response = await http.get(
-        Uri.parse('http:// 192.168.2.105:3000/api/payments'),
+        Uri.parse('http:// 192.168.2.102:3000/api/payments'),
         headers: {'Content-Type': 'application/json'},
       );
 
@@ -196,7 +196,7 @@ class _PaymentManagementScreenState extends State<PaymentManagementScreen> {
   Future<void> _processRefund(String paymentId) async {
     try {
       final response = await http.post(
-        Uri.parse('http:// 192.168.2.105:3000/api/payments/$paymentId/refund'),
+        Uri.parse('http:// 192.168.2.102:3000/api/payments/$paymentId/refund'),
         headers: {'Content-Type': 'application/json'},
       );
 

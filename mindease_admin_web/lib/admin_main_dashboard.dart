@@ -276,16 +276,16 @@ class _AdminOverviewScreenState extends State<AdminOverviewScreen> {
   Future<void> _fetchDashboardStats() async {
     try {
       // Fetch users count
-      final usersResponse =
-          await http.get(Uri.parse('http://192.168.2.105:3000/api/users'));
+      final usersResponse = await http.get(Uri.parse(
+          'https://mindease-backend-production.up.railway.app/api/users'));
 
       // Fetch therapists count
-      final therapistsResponse =
-          await http.get(Uri.parse('http://192.168.2.105:3000/api/therapists'));
+      final therapistsResponse = await http.get(Uri.parse(
+          'https://mindease-backend-production.up.railway.app/api/therapists'));
 
       // Fetch appointments count
-      final appointmentsResponse = await http
-          .get(Uri.parse('http://192.168.2.105:3000/api/appointments'));
+      final appointmentsResponse = await http.get(Uri.parse(
+          'https://mindease-backend-production.up.railway.app/api/appointments'));
 
       if (usersResponse.statusCode == 200 &&
           therapistsResponse.statusCode == 200 &&

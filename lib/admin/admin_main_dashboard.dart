@@ -273,15 +273,15 @@ class _AdminOverviewScreenState extends State<AdminOverviewScreen> {
     try {
       // Fetch users count
       final usersResponse =
-          await http.get(Uri.parse('http:// 192.168.2.105:3000/api/users'));
+          await http.get(Uri.parse('http:// 192.168.2.102:3000/api/users'));
 
       // Fetch therapists count
       final therapistsResponse = await http
-          .get(Uri.parse('http:// 192.168.2.105:3000/api/therapists'));
+          .get(Uri.parse('http:// 192.168.2.102:3000/api/therapists'));
 
       // Fetch appointments count
       final appointmentsResponse = await http
-          .get(Uri.parse('http:// 192.168.2.105:3000/api/appointments'));
+          .get(Uri.parse('http:// 192.168.2.102:3000/api/appointments'));
 
       if (usersResponse.statusCode == 200 &&
           therapistsResponse.statusCode == 200 &&

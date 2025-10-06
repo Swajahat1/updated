@@ -83,10 +83,11 @@ class _LoginPageState extends State<LoginPage> {
       String password, String role, String userType) async {
     try {
       print(
-          "Attempting login as $role to: http://192.168.2.105:3000/api/$userType/login");
+          "Attempting login as $role to: https://mindease-backend-production.up.railway.app/api/$userType/login");
 
       final response = await http.post(
-        Uri.parse("http://192.168.2.105:3000/api/$userType/login"),
+        Uri.parse(
+            "https://mindease-backend-production.up.railway.app/api/$userType/login"),
         headers: {"Content-Type": "application/json"},
         body: jsonEncode({
           "email": email,

@@ -52,8 +52,8 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
 
     try {
       final endpoint = userType == 'User'
-          ? "http://192.168.2.105:3000/api/users/changePassword"
-          : "http://192.168.2.105:3000/api/therapists/changePassword";
+          ? "https://mindease-backend-production.up.railway.app/api/users/changePassword"
+          : "https://mindease-backend-production.up.railway.app/api/therapists/changePassword";
 
       // Get authentication headers with session token
       final headers = await SessionService.getAuthHeaders();

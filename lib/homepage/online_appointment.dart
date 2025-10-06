@@ -100,7 +100,8 @@ class _OnlineAppointmentScreenState extends State<OnlineAppointmentScreen> {
 
       // If payment successful, book the appointment
       final response = await http.post(
-        Uri.parse('http://192.168.2.105:3000/api/appointments'),
+        Uri.parse(
+            'https://mindease-backend-production.up.railway.app/api/appointments'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({
           'userId': widget.userId,

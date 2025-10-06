@@ -31,7 +31,7 @@ class _UserManagementScreenState extends State<UserManagementScreen> {
     try {
       print('🔄 Fetching users from API...');
       final response = await http.get(
-        Uri.parse('http:// 192.168.2.105:3000/api/users'),
+        Uri.parse('http:// 192.168.2.102:3000/api/users'),
         headers: {'Content-Type': 'application/json'},
       );
 
@@ -74,7 +74,7 @@ class _UserManagementScreenState extends State<UserManagementScreen> {
       debugPrint('🔧 Blocking user: $userId, current status: $isBlocked');
 
       final response = await http.put(
-        Uri.parse('http:// 192.168.2.105:3000/api/users/$userId/block'),
+        Uri.parse('http:// 192.168.2.102:3000/api/users/$userId/block'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({'isBlocked': !isBlocked}),
       );

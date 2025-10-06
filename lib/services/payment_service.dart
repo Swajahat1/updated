@@ -4,7 +4,8 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class PaymentService {
-  static const String _baseUrl = 'http://192.168.2.105:3000/api';
+  static const String _baseUrl =
+      'https://mindease-backend-production.up.railway.app/api';
 
   // Initialize Stripe
   static Future<void> initializeStripe() async {

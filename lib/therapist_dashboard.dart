@@ -73,7 +73,7 @@ class _TherapistDashboardState extends State<TherapistDashboard> {
     });
     try {
       final response = await http.get(Uri.parse(
-          'http:// 192.168.2.105:3000/api/therapists/${widget.therapistId}'));
+          'http:// 192.168.2.102:3000/api/therapists/${widget.therapistId}'));
       if (response.statusCode == 200) {
         setState(() {
           _therapistData = json.decode(response.body);
@@ -102,7 +102,7 @@ class _TherapistDashboardState extends State<TherapistDashboard> {
     });
     try {
       final response = await http.get(Uri.parse(
-          'http:// 192.168.2.105:3000/api/appointments/therapist/${widget.therapistId}'));
+          'http:// 192.168.2.102:3000/api/appointments/therapist/${widget.therapistId}'));
       if (response.statusCode == 200) {
         final List<dynamic> data = json.decode(response.body);
         // Convert appointment data to patient data
@@ -155,7 +155,7 @@ class _TherapistDashboardState extends State<TherapistDashboard> {
     });
     try {
       final response = await http.get(Uri.parse(
-          'http://192.168.2.105:3000/api/appointments/therapist/${widget.therapistId}'));
+          'https://mindease-backend-production.up.railway.app/api/appointments/therapist/${widget.therapistId}'));
       if (response.statusCode == 200) {
         final List<dynamic> data = json.decode(response.body);
         setState(() {

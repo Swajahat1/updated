@@ -43,11 +43,11 @@ class _TherapistTestResultsScreenState
       if (widget.patientId != null) {
         // Get results for specific patient
         url =
-            'http:// 192.168.2.105:3000/api/test-results/user/${widget.patientId}?requesterId=${widget.therapistId}&requesterRole=therapist';
+            'http:// 192.168.2.102:3000/api/test-results/user/${widget.patientId}?requesterId=${widget.therapistId}&requesterRole=therapist';
       } else {
         // Get results for all patients of this therapist
         url =
-            'http:// 192.168.2.105:3000/api/test-results/therapist/${widget.therapistId}/patients';
+            'http:// 192.168.2.102:3000/api/test-results/therapist/${widget.therapistId}/patients';
       }
 
       final response = await http.get(Uri.parse(url));
